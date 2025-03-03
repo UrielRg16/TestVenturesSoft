@@ -1,0 +1,33 @@
+.blur-effect {
+    // background: rgb(0, 21, 255);
+    background: linear-gradient(rgb(38, 0, 255), rgba(89, 85, 153, 0.5));
+    color: white;
+    padding: 1rem;
+}
+.container {
+    // background: linear-gradient(to bottom, #002F8C, #FFFFFF);
+    border-radius: 10px;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-img-top {
+    height: 120px;
+    object-fit: cover;
+  }
+  
+  .btn-primary {
+    background-color: #0056b3;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #003f80;
+  }
+  

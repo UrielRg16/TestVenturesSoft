@@ -1,0 +1,24 @@
+<div class="detalle">
+  <div class="blur-effect">
+    <div class="container text-center py-5">
+      <h2 class="text-white mb-4">Unlock the full power of</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-6 mb-3" *ngFor="let item of items">
+          <div class="card shadow-sm">
+            <img [src]="item.image" class="card-img-top" alt="{{ item.title }}">
+            <div class="card-body text-start">
+              <span class="badge bg-info text-dark mb-2">💳 Cashback</span>
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <button class="btn btn-primary mt-4" (click)="openCardModal()">LINK YOUR CARD <i class="fa fa-angle-right"></i></button>
+    </div>
+    
+    
+  </div>
+</div>

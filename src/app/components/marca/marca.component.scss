@@ -1,0 +1,23 @@
+.marca-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+button.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-link:hover {
+    color: #007bff;
+}
+
+.btn-outline-secondary {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}

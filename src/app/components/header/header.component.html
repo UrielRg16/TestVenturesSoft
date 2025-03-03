@@ -1,0 +1,140 @@
+<header class="container-fluid p-3">
+  <div class="row justify-content-between align-items-center">
+    <div class="col-auto ms-auto">
+      <!-- Botones con separación -->
+      <button
+        class="btn btn-outline-secondary pill-button me-3"
+        (click)="openLoginModal()"
+      >
+        LOG IN <i class="fa fa-angle-right"></i>
+      </button>
+
+      <button
+        class="btn btn-outline-primary pill-button"
+        (click)="openCardModal()"
+      >
+        LINK YOUR CARD <i class="fa fa-angle-right"></i>
+      </button>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col text-center">
+        <div class="fs-1 fw-bold">
+          Link your <span class="text-dark">business card</span> to
+          <span class="text-primary">unlock cashback</span> offers
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Login -->
+  <div
+    class="modal fade"
+    tabindex="-1"
+    [class.show]="isLoginModalOpen"
+    style="display: block;"
+    *ngIf="isLoginModalOpen"
+    (click)="closeLoginModal()"
+  >
+    <div
+      class="modal-dialog"
+      role="document"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="btn-close" (click)="closeLoginModal()"></button>
+        </div>
+        <div class="modal-body">
+          <form class="custom-form" method="post">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                [(ngModel)]="email"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                required="required"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                [(ngModel)]="password"
+                name="password"
+                class="form-control"
+                placeholder="Password"
+                required="required"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="login()">Log in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para Linkear Tarjeta -->
+  <div
+    class="modal fade"
+    tabindex="-1"
+    [class.show]="isCardModalOpen"
+    style="display: block;"
+    *ngIf="isCardModalOpen"
+    (click)="closeCardModal()"
+  >
+    <div
+      class="modal-dialog"
+      role="document"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Link Your Card</h5>
+          <button type="button" class="btn-close" (click)="closeCardModal()"></button>
+        </div>
+        <div class="modal-body">
+          <form class="custom-form" method="post">
+            <div class="mb-3">
+              <label for="cardNumber" class="form-label">Card Number</label>
+              <input
+                type="text"
+                [(ngModel)]="cardNumber"
+                name="cardNumber"
+                class="form-control"
+                placeholder="Enter your card number"
+                required="required"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="expiryDate" class="form-label">Expiry Date</label>
+              <input
+                type="text"
+                [(ngModel)]="expiryDate"
+                name="expiryDate"
+                class="form-control"
+                placeholder="MM/YY"
+                required="required"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="cvv" class="form-label">CVV</label>
+              <input
+                type="text"
+                [(ngModel)]="cvv"
+                name="cvv"
+                class="form-control"
+                placeholder="Enter CVV"
+                required="required"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="linkCard()">Link Card</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

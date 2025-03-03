@@ -1,0 +1,15 @@
+<nav class="menu">
+  <div class="container text-center mt-4">
+    <h2>Explore Instant Coupons</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+      <button
+        *ngFor="let button of dataButtons.menuItems"
+        class="btn btn-outline-secondary pill-button"
+        [ngClass]="{ active: selected === button.idMenu }"
+        (click)="select(button.idMenu)"
+      >
+        {{ button.descripcion }}
+      </button>
+    </div>
+  </div>
+</nav>
